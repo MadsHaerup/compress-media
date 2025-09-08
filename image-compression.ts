@@ -41,7 +41,7 @@ interface ImageProcessingOptions {
 async function convertToWebP(options: ImageProcessingOptions): Promise<void> {
 	try {
 		// Import sharp from npm
-		const sharp = (await import('npm:sharp')).default;
+		const sharp = (await import('npm:sharp@^0.34.3')).default;
 
 		// Create sharp instance from input file
 		let image = sharp(options.input);
@@ -253,7 +253,7 @@ export async function checkImageDependencies(): Promise<{ webp: boolean; dimg: b
 
 	// Check for sharp npm package
 	try {
-		await import('npm:sharp');
+		await import('npm:sharp@^0.34.3');
 		result.webp = true;
 	} catch {
 		result.webp = false;

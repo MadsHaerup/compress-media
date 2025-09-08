@@ -7,7 +7,7 @@
  * Usage: deno run --allow-read --allow-write --allow-run cli.ts [options]
  */
 
-import { parseArgs } from 'https://deno.land/std@0.208.0/cli/parse_args.ts';
+import { parseArgs } from 'jsr:@std/cli@1/parse-args';
 import { compressMedia, checkAllDependencies, installAllDependencies, type MediaCompressionConfig } from './mod.ts';
 
 const HELP_TEXT = `
