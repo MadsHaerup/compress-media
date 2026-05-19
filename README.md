@@ -1,4 +1,4 @@
-# @avalon/compress-media
+# compress-media
 
 A powerful, standalone Deno-native media compression library that can be used independently in any project. Simplifies image and video optimization with an intuitive configuration-based API.
 
@@ -20,7 +20,7 @@ Add to your project's `deno.json`:
 ```json
 {
 	"imports": {
-		"@avalon/compress-media": "jsr:@avalon/compress-media@^1.0.0"
+		"compress-media": "jsr:compress-media@^1.0.0"
 	}
 }
 ```
@@ -30,7 +30,7 @@ Add to your project's `deno.json`:
 ### Basic Usage
 
 ```typescript
-import { compressMedia } from '@avalon/compress-media';
+import { compressMedia } from 'compress-media';
 
 // Compress all media in src/media to public/media
 await compressMedia({
@@ -43,7 +43,7 @@ await compressMedia({
 ### Images Only
 
 ```typescript
-import { compressImages } from '@avalon/compress-media';
+import { compressImages } from 'compress-media';
 
 await compressImages({
 	enabled: true,
@@ -57,7 +57,7 @@ await compressImages({
 ### Videos Only
 
 ```typescript
-import { compressVideos } from '@avalon/compress-media';
+import { compressVideos } from 'compress-media';
 
 await compressVideos({
 	enabled: true,
@@ -97,7 +97,7 @@ for (const file of files) {
 
 ```typescript
 // avalon handles everything with simple configuration
-import { compressImages } from '@avalon/compress-media';
+import { compressImages } from 'compress-media';
 
 await compressImages({
 	enabled: true,
@@ -132,7 +132,7 @@ await compressImages({
 ### Complete Media Configuration
 
 ```typescript
-import { compressMedia } from '@avalon/compress-media';
+import { compressMedia } from 'compress-media';
 
 await compressMedia({
 	enabled: true,
@@ -167,7 +167,7 @@ await compressMedia({
 ### Responsive Images Setup
 
 ```typescript
-import { compressImages } from '@avalon/compress-media';
+import { compressImages } from 'compress-media';
 
 // Generate responsive images for modern web
 await compressImages({
@@ -194,7 +194,7 @@ await compressImages({
 ### Video Optimization Pipeline
 
 ```typescript
-import { compressVideos } from '@avalon/compress-media';
+import { compressVideos } from 'compress-media';
 
 // Create optimized videos for web delivery
 await compressVideos({
@@ -245,7 +245,7 @@ Create a custom compression script in your project:
 ```typescript
 #!/usr/bin/env deno run --allow-read --allow-write --allow-run
 
-import { compressMedia } from '@avalon/compress-media';
+import { compressMedia } from 'compress-media';
 
 // Your custom configuration
 const config = {
@@ -298,7 +298,7 @@ choco install ffmpeg
 Check dependencies:
 
 ```typescript
-import { checkAllDependencies } from '@avalon/compress-media';
+import { checkAllDependencies } from 'compress-media';
 
 const deps = await checkAllDependencies();
 console.log(deps);
